@@ -1,12 +1,15 @@
+// Control Soil moisture sensor and esp Module
+// Send data to thinkspeak 
 #include <SoftwareSerial.h>
 #define RX 4
 #define TX 3
 #define sensorPower 7
 #define sensorPin A0
 #define relay 10
-String AP = "Galaxy";       // AP NAME
-String PASS = "Warmachine"; // AP PASSWORD
-String API = "P9XI2RUT68RL4QVL";   // Write API KEY
+
+String AP = "YOUR ESSID";       // AP NAME
+String PASS = "Your Password"; // AP PASSWORD
+String API = "YOUR API KEY";   // Write API KEY
 String HOST = "api.thingspeak.com";
 String PORT = "80";
 String field = "field1";
