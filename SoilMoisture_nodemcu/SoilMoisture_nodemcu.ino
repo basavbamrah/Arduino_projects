@@ -3,16 +3,16 @@
 #include "DHT.h"
 #define relay 7
 // WiFi parameters to be configured
-String apiKey = "7A55RZGEWSY7G7ZY";
-const char *ssid =  "samsung m10";
-const char *pass =  "1234567800";
+String apiKey = "YOUR API";
+const char *ssid =  "WIFI NAME";
+const char *pass =  "PASSWORD";
 const char* server = "api.thingspeak.com";   
 int WET= 16; // Wet Indicator at Digital pin D0
 int DRY= 2;  // Dry Indicator at Digital pin D4
 int sense_Pin = 0; // sensor input at Analog pin A0
 int value = 0;
 DHT dht(D2, DHT11);
-unsigned long myChannelid=1741128;
+unsigned long myChannelid="CHANNEL ID";
 WiFiClient client;
 
 void setup() {
@@ -35,10 +35,6 @@ void setup() {
   Serial.println("");
   Serial.println("WiFi connected");
 }
-//void sendVal(int n)
-//{
-//  int x = ThingSpeak.writeField(myChannelid,1,n, server);
-//}
 
 void loop() {
   digitalWrite(sense_Pin, HIGH);
